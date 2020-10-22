@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TiendaPazajera</title>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/css/flex-slider.css' %}">
+    <link rel="stylesheet" href="{% static '/css/imagenes.css' %}">
+    <link rel="stylesheet" href="{% static '/css/headerNav.css' %}">    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="{% static '/js/main.js' %}"></script>
+</head>
+<header>
+    <nav id="nav">
+        <div class="xlogo">
+            <a href="#" class="xhome-link">
+                <img src="{% static '/img/1.jpg' %}" alt="logo">
+            </a>
+           <h1>TiendaPazajera</h1>
+        </div>
+
+        <div class="xbar" id="xbar">
+            <a href="{%url 'pag_principal' %}" method = "get" class="xbar-item">
+                <div class="xbar-box">Inicio</div>
+            </a>
+            <a href="{%url 'registro' %}"   method = "get" class="xbar-item">
+                <div class="xbar-box">Registrarme</div>
+            </a>
+            <a href="{%url 'ingresar' %}" method= "get" class="xbar-item">
+                <div class="xbar-box">Iniciar Sesiòn</div>
+            </a>
+        </div>
+
+        <button type="button" id="xresponsive-menu"><span class="icon-menu"></span></button>
+    </nav>
+</header>
+</html>

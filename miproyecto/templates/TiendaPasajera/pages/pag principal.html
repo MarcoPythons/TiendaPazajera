@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TiendaPazajera</title>
+	<link rel="shortcut icon" href="{% static '/img/shortcut.jpg' %}"> 
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/css/flex-slider.css' %}">
+    <link rel="stylesheet" href="{% static '/css/imagenes.css' %}">
+	<link rel="stylesheet" href="{% static '/css/headerNav.css' %}"> 
+	<link rel="stylesheet" href="{% static '/css/footer.css' %}">
+	<link rel="stylesheet" href="{% static '/css/fontello.css' %}">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="{% static '/js/main.js' %}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<style>
+		.carousel-inner > .item > img,
+		.carousel-inner > .item > a > img {
+			
+			height: 520px;
+			width: 50%;
+			margin: auto;
+			direction: right;
+		}
+		</style>
+	<script>
+		$(function(){
+			$('.carousel').carousel()
+		});
+	</script>
+</head>
+<body> 
+    <header>
+		{% include "HeaderNav.html" %}
+		<div  class="flexslider">
+			<ul class="slides">
+				<li>
+					<img src="{% static '/img/icono.jpg' %}" alt="" class="img-fluid"/>
+					
+				</li>
+			</ul>
+		</div>
+    </header>
+    <section>
+		    <div>
+				
+				<div class="imagenes">
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<p></p>
+						  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						  <li data-target="#myCarousel" data-slide-to="1"></li>
+						  <li data-target="#myCarousel" data-slide-to="2"></li>
+						  <li data-target="#myCarousel" data-slide-to="3"></li>
+						  <li data-target="#myCarousel" data-slide-to="4"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+						  <div class="item active">
+							<a href="https://www.instagram.com/p/CC9BbiRl8OE/" target="_blank" tabindex="0"> <img src="https://instagram.fscl23-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/109542668_1371941553011442_7893537087959735858_n.jpg?_nc_ht=instagram.fscl23-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=9mQuWO2ToIEAX-G7JPU&_nc_tp=25&oh=172d0b312309862395f78d3766158b8c&oe=5FAC5697" alt="Chania"></a>
+						  </div>
+					
+						  <div class="item">
+							<a href="https://www.instagram.com/p/CFaRSCHlLHf/" target="_blank" tabindex="0"> <img src="https://instagram.fscl23-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/119887929_128249482343389_3500089747472139845_n.jpg?_nc_ht=instagram.fscl23-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=MHAoHepAnUkAX-ArwEX&_nc_tp=25&oh=a2d9b0c0501780b11e879116c0c4acde&oe=5FAC680E" alt="Chania" width="460" height="345"></a>
+						  </div>
+						
+						  <div class="item">
+							<a href="https://www.instagram.com/p/CFNLHBoFe0t/" target="_blank" tabindex="0"> <img src="https://instagram.fscl23-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/119433824_167678638272711_6132005486887007070_n.jpg?_nc_ht=instagram.fscl23-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=cDY7g6NXWPEAX8yvvs0&_nc_tp=25&oh=bdee6632e9d960c3b01bbbfe3d629430&oe=5FA95E7C" alt="Chania" width="460" height="345"></a>
+						  </div>
+					
+						  <div class="item">
+							<a href="https://www.instagram.com/p/CC9Bq6SlJ6q/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/110281631_324193108758179_7126088148229197339_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=Ely-pKrC2HMAX-vBm-i&_nc_tp=25&oh=f7e9863c0e39e15f44538b69df349aec&oe=5FAFE840" alt="Chania" width="460" height="345"></a>
+						  </div>
+						  <div class="item">
+							<a href="https://www.instagram.com/p/CC9B4WPF7vU/" target="_blank" tabindex="0"> <img src="https://instagram.fscl23-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/110998067_1475760205963927_7793297846192161570_n.jpg?_nc_ht=instagram.fscl23-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=U7D5w3ngbN4AX_1LhBI&_nc_tp=25&oh=7380e1140ec36987198ee8967a0aca0b&oe=5FAA1166" alt="Chania" width="460" height="345"></a>
+						  </div>
+						</div>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						  <span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						  <span class="sr-only">Next</span>
+						</a>
+					  </div>
+				</div>
+                <a href="https://www.instagram.com/p/CC9Bq6SlJ6q/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/110281631_324193108758179_7126088148229197339_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=NolT_TeIVg0AX_w3IPl&oh=d2d42aada41b3e84efc0dbd791f346f2&oe=5F8466C0" alt="" ></a>
+				<a href="https://www.instagram.com/p/CC9B4WPF7vU/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/110998067_1475760205963927_7793297846192161570_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=107&_nc_ohc=UBncf1gqECgAX9Yy8_G&oh=248afa9c4f16caed5e488cbd2d67380a&oe=5F828466" alt=""></a>
+				<a href="https://www.instagram.com/p/B9KHa-jnzPP/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/88281185_140160824179341_7645116661476769645_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=gHqenZWt-pgAX9WWAJt&oh=882add9cfa8a022c840a882805e357dc&oe=5F842316" alt=""></a>
+				<a href="https://www.instagram.com/p/B9KGfgFHChl/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/88236641_137687621075884_5494277707702750937_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=Vz4GqcC_sqkAX_ue3ZJ&oh=aab074d471ced2146487dd68b6942a8a&oe=5F82C58A" alt=""></a>
+				<a href="https://www.instagram.com/p/B9KGJf-nyz1/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/87608079_2832667193516265_6318451178617986308_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=09Gmi1mdB70AX-Te9Cg&oh=f7e1c47f60f14c5d151d0144939a1330&oe=5F837543" alt=""></a>
+				<a href="https://www.instagram.com/p/B9KGArVHAUX/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/87696049_612799415935708_4239473818742703526_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=EvxWRPP7X-gAX_4x2E9&oh=3b800111db0717dbdd92061bd66a21c6&oe=5F84B401" alt=""></a>
+				<a href="https://www.instagram.com/p/B9KF26THp_V/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/87553221_2452428338196413_8946751844797019448_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=jrG7OvsdINoAX_P6Hb6&oh=fe36f833d6014577169b3ada462c261a&oe=5F8310CF" alt=""></a>
+				<a href="https://www.instagram.com/p/B9KFXFqnwah/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/87848176_137521237746937_7853225020064598019_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=101&_nc_ohc=A-Af3uV5o5wAX9jRUUS&oh=fc26831f301dbded65fce292732d9baf&oe=5F84577C" alt=""></a>
+				<a href="https://www.instagram.com/p/B9KFOoxHGdy/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/88149196_585820981972582_5499139584925308648_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=XJ4K-BgswV0AX8S-D2o&oh=3a0ca357ed98ebcead0e1d4150079646&oe=5F8119C6" alt=""></a>
+				<a href="https://www.instagram.com/p/B9KFGEQH5Um/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/88417111_106911317462829_1484958869978400319_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=fKGg-rba_lEAX8Z8Rxm&oh=ba9db614276e86d3db7c442aab3fff2b&oe=5F839C3C" alt=""></a>
+				<a href="https://www.instagram.com/p/B9KEt6THm1L/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/84427235_801613387018208_357913471897774913_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=BczqubPC4IEAX8_-6gr&oh=15714dd72ac9c467ef2c84230ebcd15c&oe=5F82DD69" alt=""></a>
+				<a href="https://www.instagram.com/p/B9C-WI4HcWd/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/87667542_627174368094824_3876275121688756602_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=3XPm986VzzoAX9VMV9q&oh=4021479abd630a176a47bfa5b37ad4b2&oe=5F822F7E" alt=""></a>
+				<a href="https://www.instagram.com/p/B9C-Am9nV2F/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/87869180_101319218115053_1912315109348017667_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=-qrBuVWmkEsAX--vV_F&oh=1cacc7b15beaa459e9cf167f6d19b0a4&oe=5F818CAE" alt=""></a>
+				<a href="https://www.instagram.com/p/B9C9HbmHPmo/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/84176926_180761093366649_1359934458994133939_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=0YUtL3UmO7cAX8ZkJQO&oh=a3e244868f57ca63942e7c71aa175196&oe=5F821DF2" alt=""></a>
+				<a href="https://www.instagram.com/p/B9C8x9jH_tY/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/84329873_249575099384764_2574591535154419761_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=IvR_tas0fewAX_HjUlk&oh=d926404d23d3efa5c2b9dc27ba83633e&oe=5F81EF28" alt=""></a>
+				<a href="https://www.instagram.com/p/B9C8j6hnvro/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/84409602_779307529244753_71029430066186632_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=Ni4pbK8vfRAAX-M9QwV&oh=cb2bb47093c33c89579dc5496af343f3&oe=5F84594F" alt=""></a>
+				<a href="https://www.instagram.com/p/B9C8YdqHx44/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/83920018_2675876295871462_1280250881394326655_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=110&_nc_ohc=kL-cUuVjYRgAX9KIuLt&oh=ff911c6d5c3adde238605b2a0f5c3ddb&oe=5F8380BF" alt=""></a>
+				<a href="https://www.instagram.com/p/B9C78AsHjTM/" target="_blank" tabindex="0"> <img src="https://instagram.fscl8-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/84338100_335151967423623_6948297667683970410_n.jpg?_nc_ht=instagram.fscl8-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=UxVvmlH9eOAAX8UHX0C&oh=d5f276e022a30f06efab24651bde8692&oe=5F83ECCA" alt=""></a>
+            </div>
+		</div>
+    </section>
+		<footer class="container-fluid p-0">
+			<div class="container text-justify">
+				<div class="xfoot-content">
+					<div class="xsocial">
+						<a href="https://www.instagram.com/tiendapazajera/" target="_blank"><span class="icon-instagram"></span></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-copyright text-center py-3 xcopy">© Pazajera 
+				<a href="https://mdbootstrap.com/education/bootstrap/"></a>
+			  </div>
+		</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{% static '/js/jquery.flexslider.js' %}"></script>
+    <script srC="{% static '/js/sliderOptions.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Registrar</title>
+    <link rel="shortcut icon" href="{% static '/img/shortcut.jpg' %}"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '/css/footer.css' %}">
+	<link rel="stylesheet" href="{% static '/css/fontello.css' %}">
+	
+</head>
+<body class="xbody-reg">
+    
+    {% include "HeaderNav.html" %}
+
+    <section class="container xmt-70px">
+        <div class="xregister-form">
+            <h2>Crea tu Cuenta</h2>
+
+            <form action="/User-Created/" method="GET">
+                <label for="rut">RUT</label>
+                <input type="text" class="form-control" required oninput="checkRut(this)" id="rut" name="rut" placeholder="Ej: 12345678-k" required maxlength="10">
+            
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu Nombre" required maxlength="30">
+            
+                <label for="apellido">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingresa tu Apellido" required maxlength="30">
+            
+                <label for="fecNac">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fecNac" name="fecNac" required>
+            
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" class="form-control" id="correo" name="correo" placeholder="nombre@ejemplo.com" required>
+
+                <label for="contra">Contraseña</label>
+                <input type="password" class="form-control" id="clave" name="contra" placeholder="Ingresa tu contraseña" required>
+
+                <label for="rcontra">Ingrese Contraseña Nuevamente</label>
+                <input type="password" class="form-control" id="clave2" name="rcontra" placeholder="Repite tu contraseña" required>
+
+                <input type="submit" class="btn btn-info btn-lg btn-block mt-3"  onclick="cifrar2(), cifrar()" value="Registrar"></input>
+            </form>
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="{% static '/js/main.js' %}"></script>
+    <script src="{% static '/js/validateForm.js' %}"></script>
+    <script src="{% static '/js/validarRut.js' %}"></script>
+    <script src="{% static '/js/cifrar.js' %}"></script>
+    <script src="{% static '/js/cifrar2.js' %}"></script>
+    <script src="{% static '/js/sha1.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+footer{
+    background: #d9c8f2;
+    color: #fff;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    position: relative;
+    margin-top: 0px;
+    padding-top: 1em;
+    border-top: thin dotted;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.xfoot-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.xfoot-content .xsocial{
+    width: 250px;
+    padding: 0.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.xfoot-content .xsocial a{
+    font-size: 2.2em;
+    padding: 10px;
+    color: #fff;
+    transition: all .5s ease;
+}
+.xfoot-content .xsocial a:hover{
+    border-radius: 50%;
+}
+.xfoot-content .xsocial a:first-child:hover{
+    background: #3b5998;
+}
+.xfoot-content .xsocial a:nth-child(2):hover{
+    background: #00acee;
+}
+.xfoot-content .xsocial a:last-child:hover{
+    background: rgba(64,92,230,1);
+}
+
+.xcopy{
+    background: #7200BF;
+}

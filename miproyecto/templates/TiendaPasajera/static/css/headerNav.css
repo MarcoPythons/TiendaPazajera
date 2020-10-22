@@ -1,0 +1,121 @@
+header{
+    width: 100%;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+    background: #d9c8f2;
+    position: relative;
+    top: 70px;
+}
+nav{
+    width: 100%;
+    height: 70px;
+    max-height: 70px;
+    background: #d9c8f2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 70px;
+    align-items: center;
+    z-index: 10;
+}
+nav .xlogo{
+    width: 100px;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 70px;
+    align-items: center;
+    color: #fff;
+    margin-left: 10px;
+}
+nav .xlogo .xhome-link{
+    width: 70px;
+    height: 70px;
+    margin-top: 10px;
+}
+nav .xlogo a img{
+    width: 90%;
+}
+
+
+nav .xbar{
+    position: fixed;
+    top:70px;
+    left: -120%;
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+nav .xbar .xbar-item{
+    background: #d9c8f2;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.3em;
+    color: #fff;
+    transition: all .5s ease;
+}
+nav .xbar .xbar-item:hover{
+    text-decoration: none;
+    background: #d9c8f2;
+}
+
+nav #xresponsive-menu{
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    justify-self: flex-end;
+    margin-right: 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 2em;
+    transition: all .5s ease;
+}
+nav #xresponsive-menu:hover{
+    color: #fff;
+    border-color: #fff;
+    cursor: pointer;
+}
+
+@media (min-width: 768px){
+    #xresponsive-menu{
+        display: none;
+    }
+    header{
+        top: 0;
+    }
+
+    nav .xbar{
+        position: static;
+        width: 100%;
+        height: 70px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 70px;
+    }
+    nav .xbar .xbar-item{
+        padding: 0 0;
+        font-size: 1.3em;
+        display: flex;
+        background: transparent;
+    }
+    nav .xbar .xbar-item:hover{background: transparent;}
+    nav .xbar .xbar-item .xbar-box{
+        width: 100%;
+        height: 70px;
+        background: transparent;
+        padding: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 3px solid transparent;
+        transition: all .5s ease;
+    }
+    nav .xbar .xbar-item .xbar-box:hover{
+        background: rgba(255,255,255,.1);
+        border-color: #fff;
+    }
+}
