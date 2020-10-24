@@ -1,0 +1,8 @@
+.carousel-inner > .item > img,
+		.carousel-inner > .item > a > img {
+			
+			height: 520px;
+			width: 50%;
+			margin: auto;
+			direction: right;
+		}
