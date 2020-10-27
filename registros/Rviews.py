@@ -10,9 +10,9 @@ def registro(request):
 
 def registrado(request):
 
-    rut_desde_html =request.GET["rut"]
+    rut_desde_html =request.POST["rut"]
 
-    run_desde_bd=Cliente.objects.filter().only('run')
+    run_desde_bd=Cliente.objects.filter(run__exact = rut_desde_html)
 
     return render(request, "registro_completo.html",{"rut_cliente":run_desde_bd, "query":rut_desde_html})
 

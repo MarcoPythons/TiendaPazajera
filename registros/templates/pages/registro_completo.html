@@ -19,26 +19,27 @@
 
     <section class="container xmt-70px">
 
+        {% for ruts in rut_cliente %}    
+            
 
-        {% if rut_cliente %}
-
-            {% for ruts in rut_cliente %}
-                <div class="xregister-form">
-                    <h2>Este usuario ya se encuentra registrado</h2>
-                </div>
+            {% if query == ruts.run %}
+                    <div class="xregister-form">
+                        <h2>Este usuario ya se encuentra registrado</h2>
+                    </div>
+                    <form action = "/ingresar/">  
+                        <h4>¿Desea iniciar sesión?  </h4>
+                    <input type="submit" class="btn btn-info btn-lg btn-block mt-3"  value="Iniciar sesión"></input>
+                    </form>
+                
+            {% else %}
+            <div class="xregister-form">
+                <h2>Usuario Creado!</strong></h2>
                 <form action = "/ingresar/">  
-                    <h4>¿Desea iniciar sesión?  </h4>
                 <input type="submit" class="btn btn-info btn-lg btn-block mt-3"  value="Iniciar sesión"></input>
                 </form>
-            {% endfor %}
-        {% else %}
-        <div class="xregister-form">
-            <h2>Usuario Creado!</strong></h2>
-            <form action = "/ingresar/">  
-            <input type="submit" class="btn btn-info btn-lg btn-block mt-3"  value="Iniciar sesión"></input>
-            </form>
-        </div>
-        {% endif %}
+            </div>
+            {% endif %}
+        {% endfor %}
 
 
 

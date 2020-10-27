@@ -25,7 +25,7 @@ SECRET_KEY = 'jan9vn)cr@azq!@%bpzjd7$2(nw&1d8s_=v4grard*0q!-168('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.0.2']
+ALLOWED_HOSTS = ['192.168.0.5']
 
 #STATICFILES_DIRS = [ 'O:\2 semestre antonio varas(heavy files)\Segundo semestre Antonio Varas\Desarrollo web y movil\Ejemplo Phyton OpenCV\Ejemplo Phyton OpenCV\Reconocimiento Facial y Grises\miproyecto\miproyecto\templates\TiendaPasajera\static',]
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'miproyecto/templates/TiendaPasajera/static'),]
@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'tiendapazajera',
         'USER' : 'tiendapazajera',
         'PASSWORD': '123',
-        'HOST':'192.168.0.2',
+        'HOST':'192.168.0.5',
         'PORT':'3306',
     }
 }
@@ -129,3 +129,10 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_USE_SSL = True
+EMAIL_PORT = 465
+EMAIL_HOST_USER = "tiendapazajera@gmail.com"
+EMAIL_HOST_PASSWORD = "Jetblackheart1."
