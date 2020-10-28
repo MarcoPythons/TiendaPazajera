@@ -17,13 +17,3 @@ def ingresar(request):
 def registro(request):
     return render(request, "registar.html")
 
-def valida(request):
-    user=request.GET['user']
-    pwd=request.GET['pwd']
-
-    user2 = user.strip(" ")
-    
-    if (user2 == 'duoc' and  pwd == 'duoc123'):
-        return render(request, 'mensaje.html')
-    else:
-        return render(request, 'mensaje2.html', {'msg':'No valido'})
