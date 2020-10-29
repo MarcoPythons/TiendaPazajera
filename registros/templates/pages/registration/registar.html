@@ -21,11 +21,11 @@
         <div class="xregister-form">
             <h2>Crea tu Cuenta</h2>
 
-            <form action="" method="POST">{% csrf_token %}
+            <form method="POST">{% csrf_token %}
                 
-                {{ form }}
+                {{ form.as_p }}
 
-                <input type="submit" class="btn btn-info btn-lg btn-block mt-3"  onclick="cifrar2(), cifrar()" value="Registrar"></input>
+                <input type="submit" class="btn btn-info btn-lg btn-block mt-3" value="Registrar"></input>
             </form>
         </div>
     </section>

@@ -6,7 +6,7 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 class UsuarioManager(BaseUserManager): #con esto se puede crear usuarios personalizados
     
-    def create_user(self, email, username , run, nombre, apellido, fecha_nacimiento, password = None):   #asi creo un usuario normal
+    def create_user(self, email, username , run, nombre, apellido, fecha_nacimiento, password):   #asi creo un usuario normal
         if not email:
             raise ValueError('El usuario debe tener un correo electrónico!')
         

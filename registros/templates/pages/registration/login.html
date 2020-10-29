@@ -18,8 +18,9 @@
     <section class="container xmt-70px">
         <div class="xregister-form">
             <h2>Inicio de Sesión</h2>
-            <form action = "" method="POST"> {% csrf_token %}
-                {{ form }}
+
+            <form method="POST"> {% csrf_token %}
+                {{ form.as_p }}
                 <button type="submit" class="btn btn-primary">Ingresar</button>
               </form>
 

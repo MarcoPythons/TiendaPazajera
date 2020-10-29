@@ -28,8 +28,10 @@ DEBUG = True
 ALLOWED_HOSTS = ['192.168.0.5']
 AUTH_USER_MODEL = "registros.usuario" # esto es para que django use los usuarios personalizados
 
-LOGIN_REDIRECT_URL= '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL= '/home/' #donde se redirigira el sitio despues de hacer login
+LOGOUT_REDIRECT_URL = '/home/' #donde se redirigira el sitio despues de hacer logout
+
+
 
 
 #STATICFILES_DIRS = [ 'O:\2 semestre antonio varas(heavy files)\Segundo semestre Antonio Varas\Desarrollo web y movil\Ejemplo Phyton OpenCV\Ejemplo Phyton OpenCV\Reconocimiento Facial y Grises\miproyecto\miproyecto\templates\TiendaPasajera\static',]
@@ -47,6 +49,8 @@ INSTALLED_APPS = [
     'productos',
     'registros',
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
