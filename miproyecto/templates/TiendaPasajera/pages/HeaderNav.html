@@ -8,7 +8,6 @@
     <title>TiendaPazajera</title>
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
     <link rel="stylesheet" href="{% static '/css/flex-slider.css' %}">
-    <link rel="stylesheet" href="{% static '/css/imagenes.css' %}">
     <link rel="stylesheet" href="{% static '/css/headerNav.css' %}">    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="{% static '/js/main.js' %}"></script>
@@ -16,22 +15,36 @@
 <header>
     <nav id="nav">
         <div class="xlogo">
-            <a href="#" class="xhome-link">
+            <a href="{% url 'pag_principal' %}" class="xhome-link">
                 <img src="{% static '/img/1.jpg' %}" alt="logo">
             </a>
            <h1>TiendaPazajera</h1>
         </div>
 
         <div class="xbar" id="xbar">
-            <a href="{%url 'pag_principal' %}" method = "get" class="xbar-item">
-                <div class="xbar-box">Inicio</div>
+            {% if user.is_authenticated %}
+            <a >  
             </a>
-            <a href="{%url 'registro' %}"   method = "get" class="xbar-item">
+            <a>  
+            </a>
+            <a href="#" class="xbar-item">
+                <div class="xbar-box">{{ user.username }}</div>
+            </a>
+            <a href="{% url 'logout' %}" class="xbar-item">
+                <div class="xbar-box">Cerrar Sesión</div>
+            </a>
+            {% else %}
+            <a >   
+            </a>
+            <a>   
+            </a>
+            <a href="{%url 'registro_usuario' %}"   method = "get" class="xbar-item">
                 <div class="xbar-box">Registrarme</div>
             </a>
             <a href="{%url 'login' %}" method= "get" class="xbar-item">
                 <div class="xbar-box">Iniciar Sesión</div>
             </a>
+            {% endif %}
         </div>
 
         <button type="button" id="xresponsive-menu"><span class="icon-menu"></span></button>

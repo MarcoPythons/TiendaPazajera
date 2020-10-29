@@ -20,9 +20,8 @@ from registros import Rviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.Pag_inicial, name='pag_principal'),
-    path('ingresar/', Rviews.ingresar, name='ingresar'),
-    path('registrar/', Rviews.registro, name='registro'),
+    path('home/',views.pag_inicial, name='pag_principal'),
+    path('registro/', Rviews.registro_usuario, name='registro_usuario'),
     path('User-Created/', Rviews.registrado, name='registrado'),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

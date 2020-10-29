@@ -1,5 +1,5 @@
 from django.contrib import admin
-from registros.models import Cliente
+from registros.models import usuario
 # Register your models here.
 
 
@@ -10,6 +10,6 @@ class ClientesAdmin(admin.ModelAdmin):
    #  con list_filter se puede hacer un filtro para hacer busquedas en las tablas
 
 
-admin.site.register(Cliente, ClientesAdmin)
+admin.site.register(usuario, ClientesAdmin)
 
 

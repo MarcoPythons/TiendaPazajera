@@ -26,7 +26,7 @@ SECRET_KEY = 'jan9vn)cr@azq!@%bpzjd7$2(nw&1d8s_=v4grard*0q!-168('
 DEBUG = True
 
 ALLOWED_HOSTS = ['192.168.0.5']
-
+AUTH_USER_MODEL = "registros.usuario" # esto es para que django use los usuarios personalizados
 
 LOGIN_REDIRECT_URL= '/'
 LOGOUT_REDIRECT_URL = '/'
