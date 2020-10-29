@@ -24,4 +24,5 @@ urlpatterns = [
     path('ingresar/', Rviews.ingresar, name='ingresar'),
     path('registrar/', Rviews.registro, name='registro'),
     path('User-Created/', Rviews.registrado, name='registrado'),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

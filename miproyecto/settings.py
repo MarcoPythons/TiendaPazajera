@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['192.168.0.5']
 
+
+LOGIN_REDIRECT_URL= '/'
+LOGOUT_REDIRECT_URL = '/'
+
+
 #STATICFILES_DIRS = [ 'O:\2 semestre antonio varas(heavy files)\Segundo semestre Antonio Varas\Desarrollo web y movil\Ejemplo Phyton OpenCV\Ejemplo Phyton OpenCV\Reconocimiento Facial y Grises\miproyecto\miproyecto\templates\TiendaPasajera\static',]
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'miproyecto/templates/TiendaPasajera/static'),]
 # Application definition
