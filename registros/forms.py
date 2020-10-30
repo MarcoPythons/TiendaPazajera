@@ -107,33 +107,3 @@ class ClienteForm(forms.ModelForm):
         return user
 
 
-class LoginClienteForms(forms.ModelForm):
-    class Meta:
-        model = usuario
-        fields = (  'username','password') 
-        labels = {
-            'username':'Nombre de usuario',
-            'password':'Contraseña'
-        } 
-        widgets = {
-            'username': forms.TextInput (
-                
-            attrs ={
-                'class': 'form-control',
-                'id': 'username',
-                'name': 'username',
-                'placeholder': 'Ingresa un Nombre de usuario',
-                'required':'required'
-            }),
-            'password': forms.PasswordInput(
-
-              attrs = {
-                'class':'form-control',
-                'id':'clave',
-                'name':'contra',
-                'placeholder':'Ingresa tu contraseña',
-                'required':'required'
-            })
-            
-            }
-           

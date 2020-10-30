@@ -25,7 +25,15 @@ $(document).ready(function(){
         return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(mail); 
     }
 
-
+    // VALIDAR CONTRASEÑAS IGUALES
+    // las contraseñas seran cifradas en la segunda etapa
+    function validarPassword(pass1, pass2){
+        if(pass1 === pass2){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
     function validarFormulario(){
         var rut = document.querySelector('#rut').value;
@@ -33,8 +41,8 @@ $(document).ready(function(){
         var apellido = document.querySelector('#apellido').value;
         var fecNac = document.querySelector('#fecNac').value;
         var correo = document.querySelector('#correo').value;
-        var contra = document.querySelector('#contra').value;
-        var rcontra = document.querySelector('#rcontra').value;
+        var contra = document.querySelector('#clave').value;
+        var rcontra = document.querySelector('#clave2').value;
 
         if(!Rut.validaRut(rut)){
             alert("Rut Incorrecto");
@@ -49,15 +57,7 @@ $(document).ready(function(){
         }
     }
 
-    // VALIDAR CONTRASEÑAS IGUALES
-    // las contraseñas seran cifradas en la segunda etapa
-    function validarPassword(pass1, pass2){
-        if(pass1 === pass2){
-            return true;
-        }else{
-            return false;
-        }
-    }
+    
 
 
 
