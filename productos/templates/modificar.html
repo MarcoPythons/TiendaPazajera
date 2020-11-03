@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{% static '/img/shortcut.jpg' %}"> 
+    <link rel= "stylesheet" href="{% static '/css/styles-registro-productos.css' %}">
+    <title>Productos</title>
+    
+</head>
+<body>
+    <header>
+
+        {% include "HeaderNav.html" %}
+    </header>
+    
+    <div class="flex-container">
+        <form method="POST" enctype="multipart/form-data"> {% csrf_token %}
+            <table id= "tabla">
+
+                {{ form.as_table}}
+            </table>
+
+            
+            <input type="submit" class="botons" value="Modificar Producto"></input>
+        </form>
+    </div>    
+
+
+
+
+</body>
+</html>

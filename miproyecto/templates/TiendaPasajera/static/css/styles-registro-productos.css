@@ -1,0 +1,81 @@
+* {
+   
+   
+    box-sizing: border-box ;
+}
+body {
+    background-color: #d9c8f2;
+    
+}
+.flex-container{
+    
+    display: flex;
+    justify-content: center;
+    background-color: transparent ;
+    padding: 40px;
+    border:  2px solid #d9c8f2;
+    flex-direction: column;
+     
+    
+}
+#tabla{
+    margin: 90px
+}
+#tabla1{
+    margin: 90px;
+}
+
+#img{
+    position: relative;
+    padding-left: 43%;
+    border: 2px solid #d9c8f2;
+    margin: 10px;
+    
+
+}
+.flex-container div{
+
+    background-color: #d9c8f2;
+    width: 350px;
+    margin: 100px;   
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    border: 2px solid #000;
+    
+}
+.botons{
+    width: 100%;
+    background: #00CDFF;
+    border: none;
+    padding: 12px;
+    color: #000;
+    margin: 16px 0;
+    font-size: 16px;
+    box-shadow: 2px 3px 4px #000;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

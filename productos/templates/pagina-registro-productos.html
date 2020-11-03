@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="{% static '/img/shortcut.jpg' %}"> 
+    <link rel= "stylesheet" href="{% static '/css/styles-registro-productos.css' %}">
+    <title>Productos</title>
+    
+</head>
+<body>
+    <header>
+
+        {% include "HeaderNav.html" %}
+    </header>
+    
+    {% if user.is_authenticated and user.usuario_administrador == True %}
+    <div class="flex-container">
+        <form method="POST" enctype="multipart/form-data"> {% csrf_token %}
+            <table id= "tabla">
+
+                {{ form.as_table}}
+            </table>
+            
+
+            <input type="submit" class="botons" value="Registrar Producto"></input>
+        </form>
+        {% for p in productos %}
+                <table id= "tabla">
+                    <tr>
+                        
+                        <th>
+                            <label for="nombreproducto">Nombre Del producto:</label>
+                        </th>
+                            <td><label name="nombre" class="controls" name="nombreproducto" id="nombreproducto" maxlength="20" >{{p.nombre}}</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="nombreproducto">Tipo de prenda:</label>
+                            </th>
+                            <td>
+                                <label  name="tipo_prenda" class="controls" name="tipo_prenda" id="nombreproducto" maxlength="20">{{p.descripcion}}</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="nombreproducto">Precio del producto:</label>
+                            </th>
+                            <td>
+                                <label name="precio" class="controls" name="nombreproducto" id="nombreproducto">{{p.precio}}</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a target="_blank" tabindex="0"> <img src="{{p.imagen.url}}"  alt="" width="200" height="200"></a>
+                                <form action="{% url 'modificar' p.id %}"method="POST" enctype="multipart/form-data"> {% csrf_token %}
+                                    <input  type="submit" class="botons" value="Modificar Producto"></input>
+                                </form>
+                                <form action="{% url 'eliminar' p.id  %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+                                    <input type="submit" class="botons" value="Eliminar Producto"></input>
+                                </form>
+                            </td>
+                            
+                    </tr>  
+            </table>
+        
+           
+                {% endfor %}
+                <form action="{% url 'resultado_filtro' %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+                    
+                    <label for="nombreproducto">Filtrar por tipo prenda</label>
+                    <input type="text" name="filtro_prenda" class="controls" maxlength="20">
+                <input type="submit" class="botons" value="Filtrar Productos"></input>
+                </form>
+    {% elif user.is_authenticated and user.usuario_administrador == False  %}
+            
+
+                {% for p in productos %}
+                <table id= "tabla">
+                    <tr>
+                        
+                        <th>
+                            <label for="nombreproducto">Nombre Del producto:</label>
+                        </th>
+                            <td><input type="text" name="nombre" class="controls" name="nombreproducto" id="nombreproducto" maxlength="20" required value = "{{p.nombre}}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="nombreproducto">Tipo de prenda:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="tipo_prenda" class="controls" name="tipo_prenda" id="nombreproducto" maxlength="20" required value = "{{p.tipo_prenda}}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <label for="nombreproducto">Precio del producto:</label>
+                            </th>
+                            <td>
+                                <input type="text" name="precio" class="controls" name="nombreproducto" id="nombreproducto" required value = "{{p.precio}}">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="" target="_blank" tabindex="0"> <img src="{{p.imagen.url}}"  alt="" width="200" height="200"></a>
+                            </td>
+                    </tr>
+            </table>
+        
+           
+                {% endfor %}
+                <form action="{% url 'resultado_filtro' %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+                    
+                    <label for="nombreproducto">Filtrar por tipo prenda</label>
+                    <input type="text" name="filtro_prenda" class="controls" maxlength="20">
+                    <label for="nombreproducto">Filtrar por precio</label>
+                    <input type="number" name="filtro_precio" class="controls">
+
+                <input type="submit" class="botons" value="Filtrar Productos"></input>
+                </form>
+        
+      
+    </div>
+
+    {% endif %}
+    
+
+
+
+
+</body>
+</html>

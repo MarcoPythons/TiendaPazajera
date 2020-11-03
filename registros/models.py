@@ -1,5 +1,6 @@
-from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from django.db import models 
+from django.contrib.auth.models import AbstractBaseUser, BaseUserManager ,Group
+from django.contrib import admin
 
 
 
@@ -20,6 +21,8 @@ class UsuarioManager(BaseUserManager): #con esto se puede crear usuarios persona
         ) 
         usuario.set_password(password) # asi encriptamos la contraseña 
         usuario.save()
+        usuario.groups.add('usuarios_clientes')
+
         return usuario
 
     def create_superuser(self, username,email,run, nombre, apellido, fecha_nacimiento, password): # asi se crea un usuario administrador
@@ -49,6 +52,7 @@ class usuario(AbstractBaseUser): # usuario personalizado
     usuario_administrador = models.BooleanField(default= False) #permisos de administrador
     objects = UsuarioManager()
 
+
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = ['run', 'nombre', 'apellido', 'fecha_nacimiento', 'email'] 
 
@@ -56,6 +60,9 @@ class usuario(AbstractBaseUser): # usuario personalizado
         return f'{self.username},{self.nombre}'
 
     def has_perm(self,perm,obj = None): #se debe crear este metodo para que el administrado de djnago pueda acceder al admin de djnago
+        return True
+
+    def has_perms(self,perm,obj = None):
         return True
     
     def has_module_perms(self,app_label): #este metodo sirve para usarse en el admin de django

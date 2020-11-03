@@ -6,10 +6,13 @@ class Producto(models.Model):
     nombre = models.CharField(max_length=20, null=False)
     descripcion = models.CharField(max_length=30, verbose_name ="Descripción")
     precio = models.IntegerField()
+    tipo_prenda = models.CharField(max_length=20, null=False)
+    imagen = models.ImageField(null = True)
+    
     
     class Meta:
         db_table = 'Producto'
-        required_db_vendor = 'mysql'
+        #required_db_vendor = 'mysql'
         ordering = ['precio']
 
 
@@ -26,7 +29,7 @@ class Pedido(models.Model):
     class Meta:
         db_table = 'Pedido'
         ordering = ['fecha_pedido']
-        required_db_vendor = 'mysql'
+        #required_db_vendor = 'mysql'
 
 
 

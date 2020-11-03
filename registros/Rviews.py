@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from registros.models import usuario
-import random
 from registros.forms import ClienteForm
 from django.contrib.auth import login , authenticate
 from miproyecto import views
+
 
 #from django.contrib.auth.decorators import login_required  <--- este import se hace para poder usar el @login_required para que solo los que esten logeados puedan ver una vista
 
@@ -27,14 +27,14 @@ def registro_usuario(request):
     return render(request, "registration/registar.html", data)
 
 
-def registrado(request):
+#def registrado(request):
 
-    rut_desde_html =request.POST["rut"]
+   # rut_desde_html =request.POST["rut"]
     
-   # run_desde_bd=Cliente.objects.filter(run__exact = rut_desde_html)
+    #run_desde_bd=usuario.objects.filter(run__exact = rut_desde_html)
 
-    #if run_desde_bd:
-      #  return render(request, "registro_completo.html",{"rut_cliente":run_desde_bd, "query":rut_desde_html})
+   # if run_desde_bd:
+     #   return render(request, "registro_completo.html",{"rut_cliente":run_desde_bd, "query":rut_desde_html})
 
     #else:
     #    nombre_html = request.POST["nombre"]
