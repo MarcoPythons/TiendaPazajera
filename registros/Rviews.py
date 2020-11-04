@@ -27,6 +27,8 @@ def registro_usuario(request):
     return render(request, "registration/registar.html", data)
 
 
+
+
 #def registrado(request):
 
    # rut_desde_html =request.POST["rut"]

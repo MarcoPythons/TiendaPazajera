@@ -25,7 +25,7 @@
             {% if user.is_authenticated %}
             <a >  
             </a>
-            <a href="{% url 'pag_principal' %}" class="xbar-item">
+            <a href="{% url 'password_change' %}" class="xbar-item">
                 <div class="xbar-box">{{ user.username }}</div>
             </a>
                 {% if user.is_authenticated and user.usuario_administrador == True %}

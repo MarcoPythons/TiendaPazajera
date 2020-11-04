@@ -21,7 +21,7 @@ class UsuarioManager(BaseUserManager): #con esto se puede crear usuarios persona
         ) 
         usuario.set_password(password) # asi encriptamos la contraseña 
         usuario.save()
-        usuario.groups.add('usuarios_clientes')
+        #usuario.groups.add('usuarios_clientes')
 
         return usuario
 
@@ -48,7 +48,7 @@ class usuario(AbstractBaseUser): # usuario personalizado
     apellido = models.CharField(max_length=30, null=False)
     fecha_nacimiento = models.DateField(null=False, verbose_name ="Fecha de nacimiento")
     email = models.EmailField(null=False) #esto sirve para que se intruduscan emails validos
-    usuario_activo = models.BooleanField(default = True) #permisos de usuario normal
+    is_active = models.BooleanField(default = True) #permisos de usuario normal
     usuario_administrador = models.BooleanField(default= False) #permisos de administrador
     objects = UsuarioManager()
 
@@ -71,6 +71,8 @@ class usuario(AbstractBaseUser): # usuario personalizado
     @property
     def is_staff(self):
         return self.usuario_administrador
+
+
     
     class Meta:
         db_table = 'Usuarios' # para que la tabla se llame "Cliente" en la base de datos
