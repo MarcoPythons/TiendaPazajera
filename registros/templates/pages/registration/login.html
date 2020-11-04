@@ -22,11 +22,10 @@
             <form method="POST"> {% csrf_token %}
                 {{ form.as_p }}
                 <button type="submit" class="btn btn-primary">Ingresar</button>
+                
+              </form>
               
-              </form>
-              <form action ="{% url 'password_reset' %}" method="POST"> {% csrf_token %}
-                <button type="submit" class="btn btn-primary">Restablecer contraseña</button>
-              </form>
+              <a href="{% url 'password_reset' %}">Has olvidado tu contraseña?</a>
 
         </div>
     </section>

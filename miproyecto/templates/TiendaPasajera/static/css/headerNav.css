@@ -16,7 +16,6 @@ nav{
     display: grid;
     grid-template-columns: 40% 1fr;
     grid-template-rows: 70px;
-    align-items: ;
     z-index: 10;
 }
 nav .xlogo{

@@ -72,7 +72,6 @@ def filtrador_modificar(request, id):
         formulario = ProductoForm(data= request.POST, instance=filtro_prenda)
         if formulario.is_valid():
             formulario.save()
-            data['mensaje']= "Producto modificado correctamente"
             data['form'] = formulario
 
     return render(request, "modificar.html",data)
