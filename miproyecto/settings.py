@@ -67,8 +67,10 @@ ROOT_URLCONF = 'miproyecto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(os.path.dirname(__file__), 'O:/2 semestre antonio varas(heavy files)/Segundo semestre Antonio Varas/Desarrollo web y movil/Ejemplo Phyton OpenCV/Ejemplo Phyton OpenCV/Reconocimiento Facial y Grises/miproyecto/miproyecto/templates/TiendaPasajera/pages'), 
-        os.path.join(os.path.dirname(__file__),'O:/2 semestre antonio varas(heavy files)/Segundo semestre Antonio Varas/Desarrollo web y movil/Ejemplo Phyton OpenCV/Ejemplo Phyton OpenCV/Reconocimiento Facial y Grises/miproyecto/registros/templates/pages'),],
+        'DIRS': [os.path.join(os.path.dirname(__file__), 
+        'O:/2 semestre antonio varas(heavy files)/Segundo semestre Antonio Varas/Desarrollo web y movil/Ejemplo Phyton OpenCV/Ejemplo Phyton OpenCV/Reconocimiento Facial y Grises/miproyecto/miproyecto/templates/TiendaPasajera/pages'), 
+        os.path.join(os.path.dirname(__file__),
+        'O:/2 semestre antonio varas(heavy files)/Segundo semestre Antonio Varas/Desarrollo web y movil/Ejemplo Phyton OpenCV/Ejemplo Phyton OpenCV/Reconocimiento Facial y Grises/miproyecto/registros/templates/pages'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

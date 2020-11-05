@@ -29,7 +29,7 @@ def registro_producto(request):
 def listar_productos(request):
 
 
-    productos = Producto.objects.filter(id__exact =19)
+    productos = Producto.objects.filter(id__exact =10)
     data = {
 
         'productos':productos

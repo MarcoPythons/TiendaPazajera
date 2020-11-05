@@ -82,7 +82,7 @@ class ClienteForm(forms.ModelForm):
                 'required':'required',
                 'placeholder': 'Ejemplo: 1999-05-07',
                 'min': '1930-01-01',
-                'max': '2005-01-01'
+                'max': '2002-01-01'
                 }),
             'email': forms.EmailInput(
                 attrs= {
